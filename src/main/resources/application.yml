@@ -1,0 +1,97 @@
+server:
+  port: ${port:0}
+
+credentials:
+  username: administrator
+  password: Password1
+
+info:
+  app:
+    displayName: Spring Boot Template
+    name: ${name}
+    description: ${description}
+    version: ${version}
+    buildDate: ${buildDate}
+    commitsh: ${commitsh}
+    platform: spring-boot-groovy-angularjs
+
+# Logging Configuration
+logging.file: spring-boot-template.log
+logging.level.: WARN
+logging:
+  level:
+    org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainer: INFO
+    com.recknerd.template: INFO
+
+# Swagger Configuration
+swagger.enabled: true
+swagger.version: 1.0
+swagger.title: FlexGet Series UI API
+swagger.description: Implementation of a FlexGet Config Series Editor.
+swagger.termsOfServiceUrl: http://recknerd.com
+swagger.contact: jon.reckner@gmail.com
+swagger.license: MIT License
+swagger.licenseUrl: https://tldrlegal.com/license/mit-license
+
+# ----------------------------------------
+# CORE PROPERTIES
+# ----------------------------------------
+
+spring.application.name: spring-boot-template
+
+# Spring Profiles
+# spring.profiles.active: prod
+
+# SPRING CONFIG (ConfigFileApplicationListener)
+#spring.config.name:                                 # config file name (default to 'application')
+#spring.config.location:                             # location of config file
+
+# APPLICATION SETTINGS (SpringApplication)
+spring.main.show-banner: true
+banner.location: classpath:/banner.txt
+
+# JMX
+spring.jmx.enabled: false                   # Expose MBeans from Spring
+
+# ----------------------------------------
+# ACTUATOR PROPERTIES
+# ----------------------------------------
+
+# MANAGEMENT HTTP SERVER (ManagementServerProperties)
+#management.port:                           # defaults to 'server.port'
+#management.address:                        # bind to a specific NIC
+#management.context-path:                   # default to '/'
+#management.add-application-context-header: # default to true
+#management.security.enabled=false
+
+# PID FILE (ApplicationPidFileWriter)
+spring.pidfile: pid/spring-boot-template.pid # Location of the PID file to write
+
+# SECURITY (SecurityProperties)
+# security.user.name: lxk                     # login username
+# security.user.password: test                # login password
+# security.basic.enabled: true
+# security.basic.realm: Spring
+# security.require-ssl: false
+
+# ENDPOINTS (AbstractEndpoint subclasses)
+# Disable all endpoints and then `opt-in`
+endpoints.enabled: false
+# Enabled Endpoints
+endpoints.health.id: health
+endpoints.health.sensitive: false           # sensitive requires user/pass basic access
+endpoints.health.enabled: true
+endpoints.info.id: info
+endpoints.info.sensitive: false
+endpoints.info.enabled: true
+
+# HEALTH INDICATORS (previously health.*)
+#management.health.db.enabled=true
+#management.health.diskspace.enabled=true
+#management.health.mongo.enabled=true
+#management.health.rabbit.enabled=true
+#management.health.redis.enabled=true
+#management.health.solr.enabled=true
+#management.health.diskspace.path=.
+#management.health.diskspace.threshold=10485760
+#management.health.status.order=DOWN, OUT_OF_SERVICE, UNKNOWN, UP

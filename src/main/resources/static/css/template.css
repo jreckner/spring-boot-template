@@ -1,0 +1,36 @@
+.list-group {
+    line-height:30px
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.growl {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    float: right;
+    width: 350px;
+    z-index: 9999;
+}
+.growl-item.ng-enter {
+    -webkit-animation: bounceIn 0.5s;
+    animation: bounceIn 0.5s;
+}
+.growl-item.ng-leave {
+    -webkit-animation: bounceOut 0.5s;
+    animation: bounceOut 0.5s;
+}
+.buttons {
+    margin: 220px 4px;
+}
+
