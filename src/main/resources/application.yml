@@ -26,10 +26,12 @@ logging:
 # Swagger Configuration
 swagger.enabled: true
 swagger.version: 1.0
-swagger.title: FlexGet Series UI API
-swagger.description: Implementation of a FlexGet Config Series Editor.
+swagger.title: Spring Boot Template UI API
+swagger.description: Implementation of a Spring Boot Template.
 swagger.termsOfServiceUrl: http://recknerd.com
-swagger.contact: jon.reckner@gmail.com
+swagger.contactName: Jon Reckner
+swagger.contactEmail: jon.reckner@gmail.com
+swagger.contactUrl: http://recknerd.com
 swagger.license: MIT License
 swagger.licenseUrl: https://tldrlegal.com/license/mit-license
 

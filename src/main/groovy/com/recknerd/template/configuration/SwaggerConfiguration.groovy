@@ -12,6 +12,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.http.MediaType
 import springfox.documentation.builders.ApiInfoBuilder
 import springfox.documentation.service.ApiInfo
+import springfox.documentation.service.Contact
 import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spring.web.plugins.Docket
 
@@ -25,7 +26,9 @@ class SwaggerConfiguration {
     String title
     String description
     String termsOfServiceUrl
-    String contact
+    String contactName
+    String contactEmail
+    String contactUrl
     String license
     String licenseUrl
 
@@ -52,7 +55,7 @@ class SwaggerConfiguration {
                 title: title,
                 description: description,
                 termsOfServiceUrl: termsOfServiceUrl,
-                contact: contact,
+                contact: new Contact(contactName, contactUrl, contactEmail),
                 license: license,
                 licenseUrl: licenseUrl,
                 version: version
